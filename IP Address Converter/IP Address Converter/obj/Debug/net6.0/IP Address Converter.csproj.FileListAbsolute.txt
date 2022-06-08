@@ -1,0 +1,15 @@
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\bin\Debug\net6.0\IP Address Converter.exe
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\bin\Debug\net6.0\IP Address Converter.deps.json
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\bin\Debug\net6.0\IP Address Converter.runtimeconfig.json
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\bin\Debug\net6.0\IP Address Converter.dll
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\bin\Debug\net6.0\IP Address Converter.pdb
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\obj\Debug\net6.0\IP Address Converter.csproj.AssemblyReference.cache
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\obj\Debug\net6.0\IP Address Converter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\obj\Debug\net6.0\IP Address Converter.AssemblyInfoInputs.cache
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\obj\Debug\net6.0\IP Address Converter.AssemblyInfo.cs
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\obj\Debug\net6.0\IP Address Converter.csproj.CoreCompileInputs.cache
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\obj\Debug\net6.0\IP Address Converter.dll
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\obj\Debug\net6.0\refint\IP Address Converter.dll
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\obj\Debug\net6.0\IP Address Converter.pdb
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\obj\Debug\net6.0\IP Address Converter.genruntimeconfig.cache
+C:\Users\logma\Desktop\IP-address-converter\IP Address Converter\IP Address Converter\obj\Debug\net6.0\ref\IP Address Converter.dll
