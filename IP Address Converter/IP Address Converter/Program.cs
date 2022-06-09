@@ -46,24 +46,46 @@ Console.WriteLine("Thanks for using Conversion Calculator");
 
 static char GetMenuChoice()
 {
-    Console.WriteLine("\t****** Choose your conversion type *****\n");
-    Console.WriteLine("\t{0,2}1. Binary to Decimal", "");
-    Console.WriteLine("\t{0,2}2. Binary to Hexadecimal", "");
-    Console.WriteLine("\t{0,2}3. Decimal to Binary", "");
-    Console.WriteLine("\t{0,2}4. Decimal to Hexadecimal", "");
-    Console.WriteLine("\t{0,2}5. Hexadecimal to Binary", "");
-    Console.WriteLine("\t{0,2}6. Hexadecimal to decimal", "");
-    Console.WriteLine("\t{0,2}x. Exit", "");
-    Console.WriteLine("\n\t****************************************\n");
-    return GetValidChar($"\tEnter your selection >> ");
+    (char, bool) validCharRtn;
+    bool bLoop = true;
+    char menuChoice = ' ';
+    while (bLoop)
+    {
+        Console.Clear();
+        Console.WriteLine("\t****** Choose your conversion type *****\n");
+        Console.WriteLine("\t{0,2}1. Binary to Decimal", "");
+        Console.WriteLine("\t{0,2}2. Binary to Hexadecimal", "");
+        Console.WriteLine("\t{0,2}3. Decimal to Binary", "");
+        Console.WriteLine("\t{0,2}4. Decimal to Hexadecimal", "");
+        Console.WriteLine("\t{0,2}5. Hexadecimal to Binary", "");
+        Console.WriteLine("\t{0,2}6. Hexadecimal to decimal", "");
+        Console.WriteLine("\t{0,2}x. Exit", "");
+        Console.WriteLine("\n\t****************************************\n");
+        if (bLoop && menuChoice != ' ')
+        {
+            Console.WriteLine("\tInvalid input... try again.\n");
+            validCharRtn = GetValidChar("\tEnter your selection >> ");
+            menuChoice = validCharRtn.Item1;
+            bLoop = validCharRtn.Item2;
+        }
+        else
+        {
+            validCharRtn = GetValidChar("\tEnter your selection >> ");
+            menuChoice = validCharRtn.Item1;
+            bLoop = validCharRtn.Item2;
+        }
+    }
+    
+    return menuChoice;
 } // Display and get menu
-static char GetValidChar(string prompt)
+static (char, bool) GetValidChar(string prompt)
 {
+    bool bLoop = true;
     char letter = ' ';
     Console.Write(prompt);
-    if (!char.TryParse(Console.ReadLine(), out letter))
+    if (char.TryParse(Console.ReadLine(), out letter))
     {
-        Console.WriteLine("\n\tInvalid input... try again.\n");
+        bLoop = false;
     }
-    return letter;
+    return (letter, bLoop);
 } // UserChoiceAfterConversion
