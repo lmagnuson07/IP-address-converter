@@ -4,11 +4,15 @@ char menuChoice = ' ';
 
 while(menuChoice != 'x')
 {
+    string input = "";
     menuChoice = GetMenuChoice();
     switch (menuChoice)
     {
         case '1': // Binary to decimal
             {
+                Console.WriteLine("\tEnter a binary number (i.e 1's and 0's only) \n\t>> ");
+                input = Console.ReadLine();
+
                 break;
             }
         case '2': // Binary to hexadecimal
@@ -31,18 +35,17 @@ while(menuChoice != 'x')
             {
                 break;
             }
-        case 'x':
-            {
-                break;
-            }
+        //case 'x':
+        //    {
+        //        break;
+        //    }
         default:
             {
                 break;
             }
     } // ends switch 
 } // ends while 
-
-Console.WriteLine("Thanks for using Conversion Calculator");
+Console.WriteLine("\n\tThanks for using Conversion Calculator");
 
 static char GetMenuChoice()
 {
