@@ -87,24 +87,29 @@ namespace IP_Address_Converter
         public Binary (ConversionType conversion, string originalInput)
         {
             // validate each element is a number. 
-            if (conversion != ConversionType.BinaryToDecimal || conversion != ConversionType.BinaryToHex)
+            if (conversion != ConversionType.BinaryToDecimal && conversion != ConversionType.BinaryToHex)
             {
                 throw new ArgumentException($"Incorrect conversion type was selected: {conversion}");
             }
             Conversion = conversion;
             OriginalInput = originalInput;
+            aConvertedString = new();
             ConvertedInput = originalInput;
         }
         private string ConvertToDecimal()
         {
             StringBuilder convertedDecimal = new();
-            int index = 0;
             foreach (var item in validBinary)
             {
+                int index = 0;
                 double returnValueDouble = 0;
+                double modulus = 0;
+                ulong newItem = item;
                 for (int i = item.ToString().Length; i > 0; i--)
                 {
-                    if (item == 1)
+                    modulus = newItem % 10;
+                    newItem /= 10;
+                    if (modulus == 1)
                     {
                         returnValueDouble += 1 * Math.Pow(2, index);
                     }
@@ -119,7 +124,6 @@ namespace IP_Address_Converter
             ulong temp = 0;
             if (input.Contains('.'))
             {
-                List<string> aInput = input.Split('.').ToList<string>();
                 foreach (var str in aInput)
                 {
                     if (ulong.TryParse(str, out temp))

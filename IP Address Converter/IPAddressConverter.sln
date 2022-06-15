@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IP Address Converter", "IP Address Converter\IP Address Converter.csproj", "{EA69633B-3DFF-4E57-987A-359C00D2E2D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IP-address-converter-tests", "IP-address-converter-tests\IP-address-converter-tests.csproj", "{4988738B-ABCA-4CAE-A7FD-830F67A40A88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EA69633B-3DFF-4E57-987A-359C00D2E2D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA69633B-3DFF-4E57-987A-359C00D2E2D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA69633B-3DFF-4E57-987A-359C00D2E2D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4988738B-ABCA-4CAE-A7FD-830F67A40A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4988738B-ABCA-4CAE-A7FD-830F67A40A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4988738B-ABCA-4CAE-A7FD-830F67A40A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4988738B-ABCA-4CAE-A7FD-830F67A40A88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
