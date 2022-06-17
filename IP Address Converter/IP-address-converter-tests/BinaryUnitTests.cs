@@ -31,6 +31,36 @@ namespace IP_address_converter_tests
             }
         }
         [TestMethod]
+        //[DataRow(ConversionType.BinaryToDecimal, "0101A.D0T312.101001")] // Throws format exception/first item 0101A, input not a number
+        //[DataRow(ConversionType.BinaryToDecimal, "41230.402045.20301.101011")] // Throws ArgumentOutOfRangeException
+        //[DataRow(ConversionType.BinaryToDecimal, "-101001.101001")] // Throws FormatException
+        //[DataRow(ConversionType.BinaryToDecimal, "100101.-101001")] // Throws FormatException
+        //[DataRow(ConversionType.BinaryToDecimal, "50203921")] // Throws ArgumentOutOfRangeException
+        //[DataRow(ConversionType.BinaryToDecimal, "-1010010")] // Throws FormatException
+        //[DataRow(ConversionType.BinaryToDecimal, "afdbowg")] // Throws FormatException
+        [DataRow(ConversionType.BinaryToDecimal, "10100101011010110111.10010.1001001")] // 20 digit number (Max)
+        public void CreateBinary_BadBinary_ExceptionThrown(ConversionType conversion, string input)
+        {
+            try
+            {
+                Binary binary = new Binary(conversion, input);
+                Assert.Fail("Exception was expected and failed to be thrown");
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Assert.IsTrue(ex.Message.Contains("is not a binary number"));
+            }
+            catch (FormatException ex)
+            {
+                Assert.IsTrue(ex.Message.Contains("is not a number, or is negative"));
+            }
+            catch (Exception ex)
+            {
+                Assert.IsFalse(ex.Message.Contains("Assert.Fail"));
+                Assert.IsTrue(ex.Message.Length > 0, "Exception contained no message");
+            }
+        }
+        [TestMethod]
         public void CreateBinary_ConvertToDecimal_GoodTest()
         {
             try

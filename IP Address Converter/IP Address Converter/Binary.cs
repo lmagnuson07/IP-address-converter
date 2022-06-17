@@ -33,7 +33,7 @@ namespace IP_Address_Converter
                     {
                         if (!ulong.TryParse(item, out ulong temp))
                         {
-                            throw new FormatException($"The input of {value} is not a number");
+                            throw new FormatException($"The input of {value} is not a number, or is negative");
                         }
                     }
                 }
@@ -41,7 +41,7 @@ namespace IP_Address_Converter
                 {
                     if (!ulong.TryParse(value, out ulong temp))
                     {
-                        throw new FormatException($"The input of {value} is not a number");
+                        throw new FormatException($"The input of {value} is not a number, or is negative");
                     }
                 }
                 validBinary = new();
@@ -137,10 +137,6 @@ namespace IP_Address_Converter
                         }
                         validBinary.Add(temp);
                     }
-                    else
-                    {
-                        throw new FormatException($"The binary value entered: {str} - is not a number, or it is a negative number");
-                    }
                 }
             }
             else
@@ -155,10 +151,6 @@ namespace IP_Address_Converter
                         }
                     }
                     validBinary.Add(temp);
-                }
-                else
-                {
-                    throw new FormatException($"The binary value entered: {input} - is not a number, or it is a negative number");
                 }
             }
         }
